@@ -1,68 +1,44 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 import emailjs from "emailjs-com";
 
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    phone: "",
-    firstName: "",
-    lastName: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
   useEffect(() => {
     emailjs.init("Tb5fop6LusgvWjmnF");
   }, []);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const templateParams = {
-      email: formData.email,
-      phone: formData.phone,
-      first_name: formData.firstName,
-      last_name: formData.lastName,
-      message: formData.message,
-    };
-
-    try {
-      await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams);
-      alert("Message sent successfully!");
-      setFormData({
-        email: "",
-        phone: "",
-        firstName: "",
-        lastName: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Failed to send email:", error);
-      alert("Failed to send your message. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
-      {/* Existing Content */}
+      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+        <img
+          src="/footer-grid.svg"
+          alt="grid"
+          className="w-full h-full opacity-50"
+        />
+      </div>
 
-      <form
-        onSubmit={handleSubmit}
-        className="mx-auto my-10 p-8 rounded-lg shadow-lg bg-gray-800 text-gray-200 w-full md:w-2/3 lg:w-1/2"
-      >
+      <div className="flex flex-col items-center">
+        <h1 className="heading lg:max-w-[45vw]">
+          Ready to elevate your <span className="text-purple">network</span>{" "}
+          marketing game?
+        </h1>
+        <p className="text-white-200 md:mt-10 my-5 text-center">
+          Reach out today to discuss how I can help you build and scale your
+          network.
+        </p>
+        <a href="mailto:abirha182@gmail.com">
+          <MagicButton
+            title="Let's connect"
+            icon={<FaLocationArrow />}
+            position="right"
+          />
+        </a>
+      </div>
+
+      {/* Contact Form */}
+      <form className="mx-auto my-10 p-8 rounded-lg shadow-lg bg-gray-800 text-gray-200 w-full md:w-2/3 lg:w-2/3">
         <h1 className="text-3xl font-semibold text-center mb-8">
           Get in touch
         </h1>
@@ -75,8 +51,7 @@ const Footer = () => {
             id="frm-email"
             type="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            autoComplete="email"
             required
             className="w-full p-2 border border-gray-600 rounded bg-blue-100 text-black"
           />
@@ -89,8 +64,7 @@ const Footer = () => {
             id="frm-phone"
             type="text"
             name="phone"
-            value={formData.phone}
-            onChange={handleChange}
+            autoComplete="tel"
             required
             className="w-full p-2 border border-gray-600 rounded bg-blue-100 text-black"
           />
@@ -103,9 +77,8 @@ const Footer = () => {
             <input
               id="frm-first"
               type="text"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
+              name="first"
+              autoComplete="given-name"
               required
               className="w-full p-2 border border-gray-600 rounded bg-blue-100 text-black"
             />
@@ -117,9 +90,8 @@ const Footer = () => {
             <input
               id="frm-last"
               type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
+              name="last"
+              autoComplete="family-name"
               required
               className="w-full p-2 border border-gray-600 rounded bg-blue-100 text-black"
             />
@@ -133,8 +105,6 @@ const Footer = () => {
             id="frm-message"
             rows={6}
             name="message"
-            value={formData.message}
-            onChange={handleChange}
             className="w-full p-2 border border-gray-600 rounded bg-blue-100 text-black"
           ></textarea>
         </div>
@@ -142,14 +112,28 @@ const Footer = () => {
           <button
             type="submit"
             className="w-32 p-3 bg-blue-600 text-lg border border-black rounded-lg hover:bg-gray-700"
-            disabled={isSubmitting}
           >
-            {isSubmitting ? "Sending..." : "Submit"}
+            Submit
           </button>
         </div>
       </form>
 
-      {/* Footer Content */}
+      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
+        <p className="md:text-base text-sm md:font-normal font-light">
+          Copyright © 2024 Nuru
+        </p>
+
+        <div className="flex items-center md:gap-3 gap-6">
+          {socialMedia.map((info) => (
+            <div
+              key={info.id}
+              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+            >
+              <img src={info.img} alt="social icon" width={20} height={20} />
+            </div>
+          ))}
+        </div>
+      </div>
     </footer>
   );
 };
