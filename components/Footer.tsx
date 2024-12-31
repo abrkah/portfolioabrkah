@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
-import emailjs from "emailjs-com";
-
+const emailjs = dynamic(() => import("emailjs-com"), { ssr: false });
 const Footer = () => {
   const [formData, setFormData] = useState({
     email: "",
