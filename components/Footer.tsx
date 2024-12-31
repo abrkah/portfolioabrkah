@@ -16,7 +16,7 @@ const Footer = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    emailjs.init("Tb5fop6LusgvWjmnF"); // Replace with your actual user ID
+    emailjs.init("Tb5fop6LusgvWjmnF");
   }, []);
 
   const handleChange = (
@@ -38,7 +38,7 @@ const Footer = () => {
     };
 
     try {
-      await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams); // Replace with your service and template IDs
+      await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams);
       alert("Message sent successfully!");
       setFormData({
         email: "",
@@ -57,7 +57,8 @@ const Footer = () => {
 
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
-      {/* Existing content such as social media links */}
+      {/* Existing Content */}
+
       <form
         onSubmit={handleSubmit}
         className="mx-auto my-10 p-8 rounded-lg shadow-lg bg-gray-800 text-gray-200 w-full md:w-2/3 lg:w-1/2"
@@ -65,6 +66,7 @@ const Footer = () => {
         <h1 className="text-3xl font-semibold text-center mb-8">
           Get in touch
         </h1>
+
         <div className="block mb-6">
           <label htmlFor="frm-email" className="block mb-2 text-white">
             Email
@@ -146,6 +148,8 @@ const Footer = () => {
           </button>
         </div>
       </form>
+
+      {/* Footer Content */}
     </footer>
   );
 };
