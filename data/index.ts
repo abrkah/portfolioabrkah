@@ -4,11 +4,11 @@ export const navItems = [
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
-
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title:
+      "I excel in client collaboration, ensuring transparent communication.",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -18,7 +18,8 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title:
+      "I adapt seamlessly to different time zones for effective communication.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -28,8 +29,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
+    title: "My tech stacks",
+    description: "I strive for continuous improvement in my skills.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -38,7 +39,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "A passionate tech enthusiast dedicated to innovative development.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -46,11 +47,10 @@ export const gridItems = [
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-
   {
     id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
+    title: "Currently crafting a cutting-edge JavaScript animation library.",
+    description: "Get the inside scoop on my latest projects.",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -59,7 +59,7 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
+    title: "Are you ready to collaborate on an exciting project?",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -72,68 +72,80 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "Inventory Management System",
+    des: "A comprehensive system to track, manage, and optimize the inventory of assets and tools, providing real-time insights and reports.",
+    img: "/ims.PNG",
+    iconLists: [
+      "/react1.png",
+      "/nest.jfif",
+      "/ts.svg",
+      "/node.svg",
+      "/mysql.svg",
+    ],
+    link: "/ui.inventory.com",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "Job Portal System",
+    des: "A dynamic platform that connects employers and job seekers, providing job listings, applications, and candidate management features.",
+    img: "/jobportal.PNG",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/mongo.svg",
+      "/express.svg",
+    ],
+    link: "/ui.jobportal.com",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    title: "School Management System",
+    des: "An integrated platform for managing school operations, including student records, grades, schedules, and communication between teachers, students, and parents.",
+    img: "/school.avif",
+    iconLists: [
+      "/react.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/node.svg",
+      "/postgres.svg",
+    ],
+    link: "/ui.school.com",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    title: "Automatic Vehicle Plate Number Recognition and Gate Control System",
+    des: "A smart security solution using automated vehicle plate recognition and gate control systems for seamless vehicle entry and access management.",
+    img: "/automatic.PNG",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/ts.svg",
+      "/python.svg",
+      "/raspberrypi.svg",
+    ],
+    link: "/ui.vehicleplate.com",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Ermiyas's ability to grasp complex requirements quickly and translate them into seamless, functional solutions was impressive. His professionalism and skillset were essential in the timely delivery of our project. We are highly satisfied with the results.",
+    name: "Ermiyas Tadese",
+    title: "Client",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Tewdros's expertise in development and problem-solving ensured that our project ran smoothly from start to finish. His commitment to delivering results made him a reliable and valuable team member. We are grateful for his contribution.",
+    name: "Tewdros Kirubel",
+    title: "Client",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Abirha's technical expertise, innovative approach, and attention to detail were integral to the success of our project. His ability to tackle complex challenges and deliver high-quality solutions made him an invaluable partner. He truly went above and beyond.",
+    name: "Absra Kahsay",
+    title: "Client",
   },
 ];
 
@@ -169,35 +181,41 @@ export const companies = [
     nameImg: "/dockerName.svg",
   },
 ];
-
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Frontend Development",
+    desc: "Utilized React, Next.js, and Ant Design to create dynamic and responsive user interfaces. Focused on enhancing user experience through effective design and performance optimization.",
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: "/front.jfif", // Add appropriate thumbnail path
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
+    title: "Backend Development",
+    desc: "Implemented server-side logic using NestJS and Express, ensuring seamless integration with frontend applications. Managed API development and database interactions for robust functionality.",
+    className: "md:col-span-2",
+    thumbnail: "/backend3.jfif", // Add appropriate thumbnail path
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
+    title: "Database Management",
+    desc: "Designed and maintained MySQL databases, optimizing data storage and retrieval processes. Ensured data integrity and security while providing efficient access to application data.",
+    className: "md:col-span-2",
+    thumbnail: "/database.jfif", // Add appropriate thumbnail path
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Embedded Systems Development",
+    desc: "Developed embedded systems solutions using Python, focusing on integrating hardware and software for real-time applications. Worked on projects involving sensors and microcontrollers.",
     className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    thumbnail: "/embeded.jfif", // Add appropriate thumbnail path
+  },
+  {
+    id: 5,
+    title: "Fullstack Development",
+    desc: "Engaged in fullstack development using React, Next.js for frontend and NestJS, Express for backend. Managed the entire software development lifecycle, from concept to deployment, ensuring cohesive integration of all components.",
+    className: "md:col-span-2",
+    thumbnail: "/fullstack.jfif", // Add appropriate thumbnail path
   },
 ];
 

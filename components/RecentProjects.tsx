@@ -1,7 +1,5 @@
 "use client";
-
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 
@@ -19,7 +17,7 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
+              // title="/ui.aceternity.com"
               href="https://twitter.com/mannupaaji"
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
@@ -41,7 +39,7 @@ const RecentProjects = () => {
               </h1>
 
               <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
+                className="lg:text-xl lg:font-normal font-light text-sm "
                 style={{
                   color: "#BEC1DD",
                   margin: "1vh 0",
@@ -50,7 +48,7 @@ const RecentProjects = () => {
                 {item.des}
               </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
+              {/* <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
                     <div
@@ -71,7 +69,7 @@ const RecentProjects = () => {
                   </p>
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
                 </div>
-              </div>
+              </div> */}
             </PinContainer>
           </div>
         ))}
