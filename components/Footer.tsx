@@ -18,7 +18,6 @@ const Footer = () => {
           className="w-full h-full opacity-50"
         />
       </div>
-
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
           Ready to elevate your <span className="text-purple">network</span>{" "}
@@ -36,8 +35,7 @@ const Footer = () => {
           />
         </a>
       </div>
-
-      {/* Contact Form */}
+      {/* Contact Form
       <form className="mx-auto my-10 p-8 rounded-lg shadow-lg bg-gray-800 text-gray-200 w-full md:w-2/3 lg:w-2/3">
         <h1 className="text-3xl font-semibold text-center mb-8">
           Get in touch
@@ -116,11 +114,10 @@ const Footer = () => {
             Submit
           </button>
         </div>
-      </form>
-
+      </form> */}
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Nuru
+          Copyright © 2024 Abirha kahsay
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">
