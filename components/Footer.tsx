@@ -2,13 +2,8 @@ import { useEffect } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
-import emailjs from "emailjs-com";
 
 const Footer = () => {
-  useEffect(() => {
-    emailjs.init("Tb5fop6LusgvWjmnF");
-  }, []);
-
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
