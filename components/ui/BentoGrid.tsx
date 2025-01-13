@@ -51,10 +51,9 @@ export const BentoGridItem = ({
   const rightLists = ["NestJS", "Express", "GraphQL", "MySQL"];
 
   const [copied, setCopied] = useState(false);
-  const [isBrowser, setIsBrowser] = useState(false); // Track if running in the browser
+  const [isBrowser, setIsBrowser] = useState(false);
 
   useEffect(() => {
-    // Set isBrowser to true if the code is running in the browser
     setIsBrowser(typeof window !== "undefined");
   }, []);
 
@@ -159,13 +158,15 @@ export const BentoGridItem = ({
           )}
           {id === 6 && (
             <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${
-                  copied ? "block" : "block"
-                }`}
-              >
-                <Lottie options={defaultOptions} height={200} width={400} />
-              </div>
+              {isBrowser && (
+                <div
+                  className={`absolute -bottom-5 right-0 ${
+                    copied ? "block" : "block"
+                  }`}
+                >
+                  <Lottie options={defaultOptions} height={200} width={400} />
+                </div>
+              )}
 
               <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
