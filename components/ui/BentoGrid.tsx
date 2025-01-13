@@ -1,12 +1,15 @@
 "use client";
 import { ReactNode, useEffect, useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic"; // Dynamic import for Lottie
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+
+// Dynamically import Lottie to avoid SSR issues
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 interface BentoGridProps {
   className?: string;
@@ -124,7 +127,9 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
-          <div className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}>
+          <div
+            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+          >
             {title}
           </div>
 
@@ -158,7 +163,9 @@ export const BentoGridItem = ({
             <div className="mt-5 relative">
               {isBrowser && (
                 <div
-                  className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"}`}
+                  className={`absolute -bottom-5 right-0 ${
+                    copied ? "block" : "block"
+                  }`}
                 >
                   <Lottie options={defaultOptions} height={200} width={400} />
                 </div>
