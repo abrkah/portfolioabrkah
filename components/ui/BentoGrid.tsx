@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
 import { cn } from "@/lib/utils";
@@ -8,7 +8,12 @@ import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 
-export const BentoGrid = ({ className, children }) => {
+interface BentoGridProps {
+  className?: string;
+  children?: ReactNode;
+}
+
+export const BentoGrid = ({ className, children }: BentoGridProps) => {
   return (
     <div
       className={cn(
@@ -21,6 +26,17 @@ export const BentoGrid = ({ className, children }) => {
   );
 };
 
+interface BentoGridItemProps {
+  className?: string;
+  id: number;
+  title?: string | ReactNode;
+  description?: string | ReactNode;
+  img?: string;
+  imgClassName?: string;
+  titleClassName?: string;
+  spareImg?: string;
+}
+
 export const BentoGridItem = ({
   className,
   id,
@@ -30,7 +46,7 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
-}) => {
+}: BentoGridItemProps) => {
   const leftLists = ["React", "Next.js", "TypeScript", "JavaScript"];
   const rightLists = ["NestJS", "Express", "GraphQL", "MySQL"];
 
