@@ -1,12 +1,15 @@
 "use client";
 import { ReactNode, useEffect, useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+
+// Dynamically import Lottie to avoid SSR issues
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 interface BentoGridProps {
   className?: string;
@@ -92,14 +95,14 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              className={cn(imgClassName, "object-cover object-center")}
             />
           )}
         </div>
         <div
           className={`absolute right-0 -bottom-5 ${
             id === 5 && "w-full opacity-80"
-          } `}
+          }`}
         >
           {spareImg && (
             <img
