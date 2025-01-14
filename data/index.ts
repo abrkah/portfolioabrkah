@@ -131,13 +131,13 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Ermiyas's ability to grasp complex requirements quickly and translate them into seamless, functional solutions was impressive. His professionalism and skillset were essential in the timely delivery of our project. We are highly satisfied with the results.",
+      "Abirha's ability to grasp complex requirements quickly and translate them into seamless, functional solutions was impressive. His professionalism and skillset were essential in the timely delivery of our project. We are highly satisfied with the results.",
     name: "Ermiyas Tadese",
     title: "Client",
   },
   {
     quote:
-      "Tewdros's expertise in development and problem-solving ensured that our project ran smoothly from start to finish. His commitment to delivering results made him a reliable and valuable team member. We are grateful for his contribution.",
+      "Abirha's expertise in development and problem-solving ensured that our project ran smoothly from start to finish. His commitment to delivering results made him a reliable and valuable team member. We are grateful for his contribution.",
     name: "Tewdros Kirubel",
     title: "Client",
   },
